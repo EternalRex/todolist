@@ -1,2 +1,1 @@
-# todolist
-A practice project for creating a to do list using react.js as front end, .net entity framework core as backend
+A practice project using React.js, .Net Entity Framework Core, GRPC, Azure Function and Azure Service Bus. This will be deployed using Microsoft Azure. The CI/CD pipeline will be manage through GitHub actions.
