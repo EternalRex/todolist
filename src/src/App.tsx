@@ -46,7 +46,7 @@ function App() {
           </NavLink>
         ))}
       </PrimaryNavBar>
-      {applocations.pathname != "/" ? (
+      {applocations.pathname !== "/" ? (
         <div className="flex-1 py-4">
           <Outlet></Outlet>
         </div>

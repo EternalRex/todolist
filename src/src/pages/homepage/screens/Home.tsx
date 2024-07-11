@@ -32,7 +32,7 @@ function HomePage() {
         </section>
       </div>
       <div className="float-right   flex-1">
-        <img src={hometargetIcon} className="h-full w-3/4"></img>
+        <img alt="" src={hometargetIcon} className="h-full w-3/4"></img>
       </div>
     </main>
   );
