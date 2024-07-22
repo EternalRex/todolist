@@ -1,6 +1,7 @@
 import React from "react";
 import { appDiscription } from "../variables/homevariables";
-import hometargetIcon from "../../../assets/home_target_icon.png";
+import background from "../../../assets/home_target_icon.png";
+
 import {
   PrimaryButton,
   SecondaryButton,
@@ -32,7 +33,7 @@ function HomePage() {
         </section>
       </div>
       <div className="float-right   flex-1">
-        <img alt="" src={hometargetIcon} className="h-full w-3/4"></img>
+        <img alt="" src={background} className="h-full w-3/4"></img>
       </div>
     </main>
   );
