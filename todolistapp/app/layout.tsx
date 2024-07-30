@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,10 +15,62 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navOptions = [
+    {
+      id: 1,
+      name: "Home",
+      route: "/",
+    },
+    {
+      id: 2,
+      name: "About Us",
+      route: "/homepage",
+    },
+    {
+      id: 3,
+      name: "Contact",
+      route: "/homepage",
+    },
+    {
+      id: 4,
+      name: "Guides",
+      route: "/homepage",
+    },
+  ];
+
+  const navOptions2 = [
+    {
+      id: 1,
+      name: "Sign Up",
+      route: "/homepage",
+    },
+    {
+      id: 2,
+      name: "Sign In",
+      route: "/homepage",
+    },
+  ];
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <p>Hello App</p>
+      <body className={`${inter.className} flex-col`}>
+        <nav className="md:w-screen md:h-20 bg-appDarkBlue shadow-2xl flex gap-7 items-center md:px-10 ">
+          {/* Navigation Options on the Left Side */}
+          {navOptions.map((options) => (
+            <Link href={options.route} className="list-none" key={options.id}>
+              {options.name}
+            </Link>
+          ))}
+
+          {/* Navigation Options on the Right Side */}
+          <div className="md:ml-40 flex md:gap-7">
+            {navOptions2.map((options2) => (
+              <Link href={options2.route} key={options2.id}>
+                {options2.name}
+              </Link>
+            ))}
+          </div>
+        </nav>
         {children}
       </body>
     </html>

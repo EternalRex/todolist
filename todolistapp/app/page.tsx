@@ -2,8 +2,19 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p className="text-green-400 text-3xl">WTF</p>
+    <main>
+      <section className="text-black bg-white w-screen h-60">
+        <p>Introduction Section</p>
+      </section>
+      <section className="text-black bg-appDarkOrange w-screen h-60">
+        <p>About Us Section</p>
+      </section>
+      <section className="text-black bg-appLightOrange w-screen h-60">
+        <p>Guides Section</p>
+      </section>
+      <footer className="text-black bg-slate-600 w-screen h-60">
+        <p>Fotter Section</p>
+      </footer>
     </main>
   );
 }
