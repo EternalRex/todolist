@@ -21,17 +21,17 @@ export default function Home() {
       {/* Introductin Section */}
       <section
         id="intro"
-        className="text-black bg-white md:w-screen md:h-56 content-center flex"
+        className="text-black bg-white md:w-screen md:h-64 content-center flex"
       >
         {/* Title Div  and discription div*/}
-        <div className="md:w-4/6 h-full content-center md:px-10">
+        <div className="md:w-4/5 h-full content-center md:px-14">
           <div className="flex">
-            <p className="text-appDarkBlue md:text-8xl font-bold">Task</p>
-            <p className="text-appDarkOrange md:text-8xl font-bold">Master</p>
+            <p className="text-appDarkBlue md:text-9xl font-bold">Task</p>
+            <p className="text-appDarkOrange md:text-9xl font-bold">Master</p>
           </div>
 
           {/* The Discriptoion */}
-          <p className="text-2xl text-appLightBlue md:ml-4">
+          <p className="text-5xl text-appLightBlue md:ml-4">
             Do more and get things done!
           </p>
 
@@ -39,14 +39,28 @@ export default function Home() {
           <div className="flex gap-4 md:mt-4 md:ml-4">
             {entryOptions.map((options) =>
               options.id == 1 ? (
-                <div className="md:w-28 md:h-5 md:px-4 hover:bg-appLightOrange md:py-4 flex items-center justify-center rounded-lg bg-appDarkBlue">
-                  <Link className="text-white" href={options.route}>
+                <div
+                  key={options.id}
+                  className="md:w-28 md:h-10 md:px-4 hover:bg-appLightOrange md:py-4 flex items-center justify-center rounded-lg bg-appDarkBlue"
+                >
+                  <Link
+                    key={options.id}
+                    className="text-white"
+                    href={options.route}
+                  >
                     {options.name}
                   </Link>
                 </div>
               ) : (
-                <div className="md:w-28 hover:bg-appLightOrange md:px-4 md:py-4 rounded-lg items-center flex justify-center md:h-5 bg-appDarkOrange">
-                  <Link className="text-white" href={options.route}>
+                <div
+                  key={options.id}
+                  className="md:w-28 hover:bg-appLightOrange md:px-4 md:py-4 rounded-lg items-center flex justify-center md:h-10 bg-appDarkOrange"
+                >
+                  <Link
+                    key={options.id}
+                    className="text-white font-bold text-lg"
+                    href={options.route}
+                  >
                     {options.name}
                   </Link>
                 </div>
@@ -56,16 +70,16 @@ export default function Home() {
         </div>
 
         {/* Image div */}
-        <div className="md:w-1/2 md:px-6 md:py-4">
-          <Image alt="" src={TaskListImage} width={200} height={250}></Image>
+        <div className="md:w-1/2 md:px-6 ">
+          <Image alt="" src={TaskListImage} width={300} height={350}></Image>
         </div>
       </section>
 
       {/* About us section */}
-      <section id="aboutus" className="text-black  w-screen h-60">
+      <section id="aboutus" className="text-black w-screen h-60">
         {/* Title Div */}
-        <div className="md:w-screen md:h-10 grid place-items-center">
-          <h2 className="text-3xl text-appLightBlue md:mt-10 underline font-bold">
+        <div className="md:w-screen md:h-10 grid self-center place-items-center">
+          <h2 className="text-4xl text-appLightBlue md:mt-10 underline font-bold">
             What is this about?
           </h2>
         </div>
